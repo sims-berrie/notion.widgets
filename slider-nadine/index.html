@@ -52,10 +52,6 @@ body {
     center top/cover;
 }
 
-
-}
-
-
 .buttons button#prev {
   position: absolute;
   top: 50%;
@@ -119,9 +115,6 @@ body {
     const slides = document.querySelectorAll(".slide");
     const nextButton = document.getElementById("next");
     const prevButton = document.getElementById("prev");
-    const auto = true;
-    const intervalTime = 5000;
-    let slideInterval;
 
     const nextSlide = () => {
       const current = document.querySelector(".current");
