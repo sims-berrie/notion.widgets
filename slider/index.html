@@ -116,7 +116,6 @@ body {
     const nextButton = document.getElementById("next");
     const prevButton = document.getElementById("prev");
     const auto = true;
-    const intervalTime = 5000;
     let slideInterval;
 
     const nextSlide = () => {
@@ -150,12 +149,12 @@ body {
       prevSlide();
       if (auto) {
         clearInterval(slideInterval);
-        slideInterval = setInterval(nextSlide, intervalTime);
+        slideInterval = Interval(nextSlide, intervalTime);
       }
     });
 
     if (auto) {
-      slideInterval = setInterval(nextSlide, intervalTime);
+      slideInterval = Interval(nextSlide, intervalTime);
     }
 
   </script>
