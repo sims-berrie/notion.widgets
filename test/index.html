@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<head>
+ 
+<!--
+ 
+    MEDIA II
+        by alydae
+
+        released: february 23, 2020
+        last updated: september 10, 2023
+        
+            - do not steal any part of this code
+            - do not even TOUCH the credit
+            - direct questions to enchantedthemes.tumblr.com
+            
+        carousel script: https://kenwheeler.github.io/slick/
+            
+    thank you for using!!!
+
+-->
+ 
+<title>TS4R|Portraits</title>
+<link rel="shortcut icon" href="{Favicon}">
+ 
+<!-- scripts - DO NOT TOUCH -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+
+<script src="https://static.tumblr.com/rzl30kg/eAxm7a751/jquery.style-my-tooltips.js"></script>
+<script>
+   (function($){
+       $(document).ready(function(){
+           $("[title]").style_my_tooltips({
+               tip_follows_cursor:true,
+               tip_delay_time:200,
+               tip_fade_speed:300
+           }
+               );
+       });
+   })(jQuery);
+</script>
+
+<script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
+<script>
+$(window).load(function () {
+    $('#main').masonry({
+        itemSelector : ".media",
+		horizontalOrder: true
+    });
+});
+</script>
+
+<!-- custom font -->
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'> 
+
+<script src="https://kit.fontawesome.com/4fe045a39a.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+
+<style type="text/css">
+
+@keyframes fadein {
+    from { opacity:0; }
+    to   { opacity:1; }
+}
+
+@-moz-keyframes fadein {
+    from { opacity:0; }
+    to   { opacity:1; }
+}
+
+@-webkit-keyframes fadein {
+    from { opacity:0; }
+    to   { opacity:1; }
+}
+
+@-ms-keyframes fadein {
+    from { opacity:0; }
+    to   { opacity:1; }
+}
+
+@-o-keyframes fadein {
+    from { opacity:0; }
+    to   { opacity:1; }
+}
+
+/*-- selection --*/
+
+::-moz-selection { background:var(--accent); color:var(--title); }
+::selection { background:var(--accent); color:var(--title); }
+
+/*-- scrollbar --*/
+
+::-webkit-scrollbar {  
+    width:1px;  
+    height:2px;
+}  
+   
+::-webkit-scrollbar-thumb { background-color:var(--text); }
+ 
+/*-- tooltips --*/
+
+#s-m-t-tooltip {
+    color:var(--text);
+    background-color:var(--accent); 
+    font-size:calc(var(--font-size) - 2px);
+    font-family:'Open Sans', helvetica, sans-serif;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    text-align:center;
+    position:absolute;
+    padding:0px 5px 0px 5px;
+    margin-top:30px;
+    border:1px solid var(--borders);
+    z-index:9999;
+}
+
+/*-- tumblr controls --*/
+
+.tmblr-iframe, .iframe-controls–desktop {
+    display:none!important;
+}
+
+/*-- common --*/
+
+a, a:hover, .more, .media:hover .more {
+    transition-duration: 0.6s;  
+    -moz-transition-duration: 0.6s;  
+    -webkit-transition-duration: 0.6s;  
+    -o-transition-duration: 0.6s;
+}
+
+/*-- change all variables here --*/
+
+:root {
+    --background:#f0f0f0;
+    --accent:#c9183f;
+    --text:#525252;
+    --links:#000000;
+    --links-hover:#f0f0f0;
+    --title:#000000;
+    --borders:#c9183f;
+    --font-size:15px;
+}
+
+/*-- general customisation --*/
+
+body {
+    color:var(--text);
+    background:var(--background);
+    font-style:normal; 
+    font-family:'Open Sans', helvetica, sans-serif; 
+    font-size:var(--font-size); 
+    font-weight:400;
+    text-decoration:none; 
+    line-height:180%; 
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    -webkit-animation: fadein 1.5s;
+    -moz-animation: fadein 1.5s;
+    -o-animation: fadein 1.5s; 
+    animation: fadein 1.5s;
+}
+
+a { text-decoration:none; color:var(--links); }   
+a:hover { color:var(--links-hover); cursor:pointer; }
+
+b, strong { font-weight:600; color:var(--title); }
+i, em { font-style:italic; }
+
+/*-- container --*/
+
+#all { 
+    margin:100px auto 0px; 
+    width:calc(325px * 3 + 50px * 2); 
+    /* (image width * how many + margin-left+margin-right * how many-1) */
+}
+
+/*-- header --*/
+
+header { width:100%; height:auto; }
+
+.icon { float:left; margin-right:15px; }
+
+.icon img { 
+    width:30px; 
+    height:30px; 
+    border-radius:100%; 
+    padding:3px;
+    border:1px solid var(--borders);
+}
+
+.title { 
+    font-size:calc(var(--font-size) + 4px);
+    font-weight:bold;
+    letter-spacing:2px;
+    line-height:38px;
+    text-transform:uppercase;
+    color:var(--title);
+}
+
+.desc { 
+    margin-left:150px; 
+    margin-top:20px; 
+    font-size:calc(var(--font-size) - 1px);
+    height:72px; 
+    width:445px; /* decrease this value by how much you've increased the filters */
+    overflow-y:hidden; 
+}
+
+.requests { 
+    float:right;
+    font-size:calc(var(--font-size) + 2px);
+    font-weight:700;
+    text-transform:uppercase;
+    padding:5px 12px;
+    color:var(--links-hover);
+    border:1px solid var(--links-hover);
+    border-radius:5px;
+}
+
+.links { 
+    margin-top:20px;
+    margin-left:-45px;
+    width:100px;
+    font-style:italic; 
+    float:left;
+    height:78px;
+    overflow: visible;
+}
+
+.links a { display:block; }
+.links i { margin-right:7px; color:var(--links-hover); }
+
+/*--filters--*/
+
+.sort { 
+    position:relative;
+    font-size:calc(var(--font-size) - 5px);
+    line-height:20px;
+    margin-top:20px;
+    width:400px; /* increase this value if you want the filters to be wider */
+    float:right;
+    background:var(--accent); 
+    padding:10px 10px; 
+    height:50px;
+    overflow:visible;
+    border:1px solid var(--borders);
+}
+
+.sort ul, .colours ul {
+    list-style:none; 
+    padding-left:0px;
+    margin-top:0;
+    margin-bottom:0;
+}
+
+.sort li { display:inline; list-style:none; } 
+.sort li a.selected, .colours a.selected { font-weight:700; color:var(--links-hover); }
+
+.sort a { display:inline; margin-right:10px; }
+
+.sort b { 
+    text-transform:uppercase; 
+    letter-spacing:0.5px; 
+    font-weight:700;
+}
+
+/*-- media --*/
+
+#main { 
+    width:calc(325px * 3 + 50px * 3); 
+    /* (image width * how many + margin-left+margin-right * how many) */
+    height:auto; 
+    margin-top:50px; 
+    margin-bottom:75px; 
+}
+
+.media {
+    float:left;
+    margin-right:10px; 
+    margin-bottom:10px;
+    height:auto;
+    width:350px; /* image width */
+}
+
+.media img {
+    height:auto;
+    width:350px; /* image width */
+}
+
+.multiple { margin-bottom:5px!important; }
+
+.more {
+    float:left;
+    position:absolute;
+    margin:10px;
+    text-align:center;
+    font-style:italic;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    padding:2px 5px;
+    background:var(--background);
+    border:1px solid var(--borders);
+    opacity:0;
+    border-radius:5px;
+    z-index:9;
+}
+
+.media:hover .more { opacity:0.9; }
+
+.subtitle {
+    letter-spacing:1px;
+    font-weight:bold;
+    font-size:calc(var(--font-size) + 1px);
+    line-height:180%;
+    text-align:center;
+    text-transform:uppercase;
+}
+
+/*-- carousel --*/
+
+.slick-dots li.slick-active button:before {
+    opacity:1;
+    color:var(--links-hover);
+}
+
+.slick-dots li { margin:0; }
+.slick-dots li button:hover:before { color:var(--links-hover); }
+
+/*-- credit - DO NOT TOUCH --*/
+
+.credit a {
+    font-size:10px;
+    bottom:15px;
+    right:20px;
+    position:fixed;
+    text-transform:uppercase;
+}
+
+</style>
+</head>
+
+
+
+<body>
+
+
+<div id="all">
+
+<header>
+    
+    <!-- the default is your icon. if you want to change it, remove {PortraitURL-128} and replace it with the image url of the one you want. -->
+    <div class="icon"><img src="{PortraitURL-128}"/></div>
+    <div class="title">Official Portraits</div><!-- title -->
+    <div class="links">
+    <!-- these are your header links. it will scroll if there's more. to change the icon, go to https://fontawesome.com/icons. -->
+        <a href="/"><i class="fas fa-home fa-fw"></i>home</a> 
+        <a href="/ask"><i class="fas fa-envelope fa-fw"></i>ask</a></a> 
+        <a href="https://thesims4royalty.tumblr.com/navigation"><i class="fas fa-bars fa-fw"></i>navigation</a> 
+    </div>
+    
+<!-- HOW TO CUSTOMISE THE FILTERS
+
+template for new filter groups: 
+    <ul class="filter option-set" data-filter-group="group1">
+    <b>category:</b>&emsp;
+        <li><a href="#" data-filter-value="" class="selected">all</a></li>
+        <li><a href="#" data-filter-value=".filter">filter name</a></li>
+        <li><a href="#" data-filter-value=".filter">filter name</a></li>
+    </ul>
+    
+template for new filters:
+        <li><a href="#" data-filter-value=".filter">filter name</a></li>
+
+in order to make your filters match your books/tv shows/fic/whatever, you only need to change the '.filter' and 'filter name' part. the 'category' line is optional.
+for example, if I wanted to make my media filter by new only, my code would look like this
+    <li><a href="#" data-filter-value=".new">new</a></li>
+note the areas where it's been changed.
+ 
+it is essential that you do not change any other part, including the 'exclusive' in the first filter group, as well as the first filter in every group.
+    <li><a href="#" data-filter-value="" class="selected">all</a></li>
+
+the filter names all need to be different. if you have more than three groups, it will scroll.
+
+-->
+    
+    <div class="sort">
+    <ul class="filter option-set exclusive" data-filter-group="group1">
+        <li><b><a href="#" data-filter-value="" class="selected">all</a></b></li>
+        <li><b><a href="#" data-filter-value=".new">Most Recent</a></b></li>
+    </ul>
+    <ul class="filter option-set exclusive" data-filter-group="group2">
+        <li><b><a href="#" data-filter-value="" class="selected">all</a></b></li>
+        <li><b><a href="#" data-filter-value=".sulani">Sulani</a></b></li>
+        <li><b><a href="#" data-filter-value=".tartosa">Tartosa</a></b></li>
+        <li><b><a href="#" data-filter-value=".windenburg">Windenburg</a></b></li>
+        <li><b><a href="#" data-filter-value=".oasis">Oasis Springs</a></b></li>
+    </ul>
+    </div>
+
+    <!-- please have something here! the page design will look weird if there's nothing here. it will automatically scroll. -->
+    <div class="desc">
+    The official portraits of the royal families can be found on this page. Please use the navigation on the right to filter between kingdoms.
+    </div>
+
+</header>
+
+
+
+<div id="main">
+
+<!-- TEMPLATES FOR MORE BOXES
+
+FOR SINGLE PICS:
+<div class="media">
+    <div class="more">optional text on hover</div>
+    <img src="">
+</div>
+
+FOR MULTIPLE PICS: you can have as many as you want.
+<div class="media">
+<div class="more">optional text on hover</div>
+    <div class="multiple">
+        <img src="">
+        <img src="">
+    </div>
+</div>
+
+to add a link to each picture:
+    <a href=""><img src=""></a>
+    
+if you do not want the text on hover, just delete this line.
+    <div class="more">optional text on hover</div>
+    
+if you want text under the headers (keep it short!), add this line under the last <img src="">
+    <div class="subtitle">subtitle</div>
+
+-->
+
+<!-- HOW TO ADD FILTERS
+
+to add the filters, add the same name that you used above in the '.filter' but without the dot in front. you can add as many as you want but the 'media' in the beginning MUST stay there.
+
+for example, if you wanted to have the filters 'fave' and 'new' together for one box, the filters should look like this 
+	<div class="media fave new"> 
+note how media is still there in front.
+
+-->
+
+<div class="media new sulani">
+    <a href="https://i.imgur.com/sxskhNI.jpg" target="_blank"><img src="https://i.imgur.com/sxskhNI.jpg"></a>
+</div>
+
+<div class="media new tartosa">
+     <a href="https://i.imgur.com/ZEbVJ6P.jpg" target="_blank"><img src="https://i.imgur.com/ZEbVJ6P.jpg"></a>
+</div>
+
+<div class="media new windenburg">
+     <a href="https://i.imgur.com/RHAchGn.jpg" target="_blank"><img src="https://i.imgur.com/RHAchGn.jpg"></a>
+</div>
+
+<div class="media new tartosa">
+     <a href="https://i.imgur.com/9kvZLpL.jpg" target="_blank"><img src="https://i.imgur.com/9kvZLpL.jpg"></a>
+</div>
+
+
+</div><!-- end main -->
+
+
+</div><!-- end all -->
+
+
+
+<!-- credit - DO NOT TOUCH -->
+
+<div class="credit">
+    <a href="https://enchantedthemes.tumblr.com" title="alydae">A.</a>
+</div>
+
+
+</body>
+
+
+<!-- scripts - DO NOT TOUCH -->
+
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+				
+<script type="text/javascript">
+    $(document).ready(function(){
+      $('.multiple').slick({
+          dots: true,
+          dotsClass: 'slick-dots',
+          arrows: false,
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          adaptiveHeight: true
+      });
+    });
+</script>
+
+<!-- combination filters by @magnusthemes -->
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script src="https://static.tumblr.com/p0knose/FpAp5c11c/magnusthemes.combofilters.js"></script>
+
+<script>
+$(document).ready(function() {
+ var $container = $("#main"); // the container with all the elements to filter inside
+ var filters = {}; //should be outside the scope of the filtering function
+ /* --- read the documentation on isotope.metafizzy.co for more options --- */
+ var $grid = $container.isotope({
+   itemSelector: ".media", // the elements to filter
+   percentPosition: false // put true if you use percentage widths, otherwise put false
+ });
+ $(".option-set a").click(function(e) {
+   var $this = $(this); // cache the clicked link
+   var filterAttr = "data-filter-value";
+   var filterValue = $this.attr(filterAttr); // cache the filter
+   var $optionSet = $this.parents(".option-set"); // cache the parent element
+   var group = $optionSet.attr("data-filter-group"); // cache the parent filter group 
+   var filterGroup = filters[group];
+   if (!filterGroup) {
+     filterGroup = filters[group] = []; 
+   }
+   var $selectAll = $optionSet.find('a['+filterAttr+'=""]'); // the 'select all' button in the current group
+   var activeClass = "selected", // the class for active links
+     exclClass = "exclusive"; // the class for exclusive groups
+ comboFiltering($this,filters,filterAttr,filterValue,$optionSet,group,$selectAll,activeClass,exclClass);
+   var comboFilter = getComboFilter(filters);
+   $grid.isotope({
+     filter: comboFilter
+   });
+   $this.toggleClass(activeClass);
+   e.preventDefault();
+ });
+});
+</script>
+ 
+<!-- end filter scripts -->
+
+</html>
