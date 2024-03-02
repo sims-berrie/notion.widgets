@@ -36,10 +36,12 @@ body {
   height: 100%;
   opacity: 0;
   text-align: center;
+  color: black;
 }
 
 .slide.current {
   opacity: 1;
+  color: black;
 }
 
 
@@ -83,6 +85,12 @@ body {
   color: #000000;
 }
 
+  .centered {
+  position: absolute;
+  top: 97%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
 @media (min-width: 640px) and (min-height: 640px) {
   .slide .content {
     bottom: 70px;
@@ -100,6 +108,7 @@ body {
     transform: translateX(600px);
   }
   
+  
 }
 </style>
 </head>
@@ -107,9 +116,14 @@ body {
 <body>
   <!-- partial:index.partial.html -->
   <div class="slider">
-    <div class="slide current"></div>
-    <div class="slide"></div>
-    <div class="slide"></div>
+    <div class="slide current">
+      <div class="centered">King Francisco</div>
+      
+    <div class="slide">
+      <div class="centered">Queen Lydia</div>
+
+      <div class="slide">
+      <div class="centered">Princess Helena</div>
 
   </div>
   <div class="buttons">
