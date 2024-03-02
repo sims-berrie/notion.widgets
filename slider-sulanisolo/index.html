@@ -35,11 +35,12 @@ body {
   width: 100%;
   height: 100%;
   opacity: 0;
-  text-align: center;
+  color: black;
 }
 
 .slide.current {
   opacity: 1;
+  color: black;
 }
 
 
@@ -56,19 +57,18 @@ body {
   .slide:nth-child(3) {
   background: url("3.png") no-repeat
     center top/cover;
-}
 
-.slide:nth-child(4) {
+    .slide:nth-child(4) {
   background: url("4.png") no-repeat
     center top/cover;
 }
 
-  .slide:nth-child(5) {
+    .slide:nth-child(5) {
   background: url("5.png") no-repeat
     center top/cover;
 }
 
-.slide:nth-child(6) {
+    .slide:nth-child(6) {
   background: url("6.png") no-repeat
     center top/cover;
 }
@@ -115,6 +115,7 @@ body {
     transform: translateX(600px);
   }
   
+  
 }
 </style>
 </head>
@@ -122,12 +123,23 @@ body {
 <body>
   <!-- partial:index.partial.html -->
   <div class="slider">
-    <div class="slide current"></div>
-    <div class="slide"></div>
-    <div class="slide"></div>
-    <div class="slide"></div>
-    <div class="slide"></div>
-    <div class="slide"></div>
+    <div class="slide current">
+      <h3>King Malakai</h3></div>
+      
+    <div class="slide">
+      <h3>Queen Kanani</h3></div>
+
+      <div class="slide">
+        <h3>Crown Prince Akamu</h3></div>
+
+    <div class="slide">
+        <h3>Prince Ewewaka</h3></div>
+
+    <div class="slide">
+        <h3>Prince Nikaloa</h3></div>
+
+  <div class="slide">
+        <h3>Princess Savannah</h3></div>
 
   </div>
   <div class="buttons">
