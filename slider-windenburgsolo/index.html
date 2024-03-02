@@ -35,11 +35,12 @@ body {
   width: 100%;
   height: 100%;
   opacity: 0;
-  text-align: center;
+  color: black;
 }
 
 .slide.current {
   opacity: 1;
+  color: black;
 }
 
 
@@ -56,7 +57,6 @@ body {
   .slide:nth-child(3) {
   background: url("3.png") no-repeat
     center top/cover;
-}
 
     .slide:nth-child(4) {
   background: url("4.png") no-repeat
@@ -105,6 +105,7 @@ body {
     transform: translateX(600px);
   }
   
+  
 }
 </style>
 </head>
@@ -112,10 +113,17 @@ body {
 <body>
   <!-- partial:index.partial.html -->
   <div class="slider">
-    <div class="slide current"></div>
-    <div class="slide"></div>
-    <div class="slide"></div>
-    <div class="slide"></div>
+    <div class="slide current">
+      <h3>Queen Nadine</h3></div>
+      
+    <div class="slide">
+      <h3>Prince Consort Rowan</h3></div>
+
+      <div class="slide">
+        <h3>Crown Princess Tabitha</h3></div>
+
+    <div class="slide">
+        <h3>Prince Julien</h3></div>
 
   </div>
   <div class="buttons">
